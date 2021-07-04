@@ -14,8 +14,12 @@ class Window(Frame):
       self.master.title("EasyMD")
       self.pack(fill=BOTH, expand=1)
 
-      self.inputeditor = Text(self, width="1")
+      self.inputeditor = Text(self, background="black", foreground="white", width="1" , font=self.myfont)
       self.inputeditor.pack(fill=BOTH, expand=1, side=LEFT)
+
+      self.outputbox = HTMLLabel(self, width="1", background="black", foreground="white",  html="<h1>EasyMD</h1>")
+      self.outputbox.pack(fill=BOTH, expand=1, side=RIGHT)
+      self.outputbox.fit_height()
 
 
 
