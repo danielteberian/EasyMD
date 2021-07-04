@@ -14,9 +14,13 @@ class Window(Frame):
       self.master.title("EasyMD")
       self.pack(fill=BOTH, expand=1)
 
+      self.inputeditor = Text(self, width="1")
+      self.inputeditor.pack(fill=BOTH, expand=1, side=LEFT)
+
 
 
 root = Tk()
 root.geometry("700x600")
 app = Window(root)
 app.mainloop()
+
